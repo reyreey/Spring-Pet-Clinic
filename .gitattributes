@@ -1,2 +1,2 @@
-* linguist-vendored
-*.class linguist-vendored=false
+input/* linguist-detectable=false
+output/* linguist-detectable=false

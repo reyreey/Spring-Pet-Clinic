@@ -25,16 +25,16 @@ public class VisitMapService extends AbstractMapService<Visit,Long> implements V
     }
 
     @Override
-    public void delete(Visit object) {
-        super.delete(object);
+    public void delete(Visit visit) {
+        super.delete(visit);
     }
 
     @Override
-    public Visit save(Visit object) {
-        if (object.getPet()==null||object.getPet().getOwner()==null||object.getPet().getId()==null||object.getPet().getOwner().getId()==null){
+    public Visit save(Visit visit) {
+        if (visit.getPet()==null||visit.getPet().getOwner()==null||visit.getPet().getId()==null||visit.getPet().getOwner().getId()==null){
             throw new RuntimeException("invalid visit!");
         }
-        return super.save(object);
+        return super.save(visit);
     }
 
     @Override
